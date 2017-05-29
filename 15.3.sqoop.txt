@@ -1,0 +1,34 @@
+1.Explain the working of SQOOP in brief.
+
+  Sqoop: “SQL to Hadoop and Hadoop to SQL”
+
+ * Sqoop is a tool designed to transfer data between Hadoop and relational database servers. 
+ * It is used to import data from relational databases such as MySQL, Oracle to Hadoop HDFS, and export from Hadoop file system to relational databases. 
+
+* The import tool imports individual tables from RDBMS to HDFS.
+* Each row in a table is treated as a record in HDFS. All records are stored as text data in text files or as binary data in Avro and Sequence files.
+* The export tool exports a set of files from HDFS back to an RDBMS.
+* The files given as input to Sqoop contain records, which are called as rows in table. Those are read and parsed into a set of records and delimited with user-specified delimiter.
+
+* Sqoop automates most of the process, depends on the database to describe the schema of the data to be imported. 
+* Sqoop uses MapReduce framework to import and export the data, which provides parallel mechanism as well as fault tolerance.
+* Sqoop makes developers life easy by providing command line interface. Developers just need to provide basic information like source, destination and database 
+  authentication details in the sqoop command. Sqoop takes care of remaining part.
+
+Advantages:
+
+Sqoop is Robust, has great community support and contributions. 
+Sqoop is widely used in most of the Big Data companies to transfer data between relational databases and Hadoop.
+
+
+Sqoop provides many  features like:
+ * Full Load
+ * Incremental Load
+ * Parallel import/export
+ * Import results of SQL query
+ * Compression
+ * Connectors for all major RDBMS Databases
+ * Kerberos Security Integration
+ * Load data directly into Hive/Hbase
+ * Support for Accumulo
+
